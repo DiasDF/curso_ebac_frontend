@@ -1,0 +1,78 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   /* Reset - Zerar todos os valores */
+}
+
+body > header {
+   background-color: #2f3640;
+   padding: 16px 0;
+   color: darkgray;
+}
+/* O sinal > significa FILHO DIRETO, busca o header que é filho direto de body
+ no index.html há headers também para os articles, assim o sinal > delimita para o header da página*/
+
+header .container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+header li a {
+   color: darkgray;
+   font-size: 20px;
+}
+
+header li {
+   display: inline;
+   margin-left: 10px;
+}
+.container {
+   width: 1366px;
+   margin: 0 auto;
+}
+
+.articles {
+   display: flex;
+   flex-wrap: wrap; /* Quebra a linha quando a largura chegar ao limite definido para a class container*/
+   justify-content: space-between; /* Distribuiu o espeço restante 10% entre os objetos */
+   text-align: justify;
+}
+
+.articles article img {
+   /* height: 180px; */
+   width: 100%;
+}
+
+.articles article {
+   width: 30%;
+   /* busca limitar a no max 3 articles por linha
+   usado juntamente com a propriedade flex-wrap */
+}
+
+.articles article h3 {
+   margin: 8px auto;
+}
+
+.articles article a {
+   background-color: rgb(72, 72, 122);
+   color: white;
+   padding: 8px;
+   display: inline-block;
+   border-radius: 7px;
+   margin-top: 8px;
+}
+
+section {
+   padding: 16px 0;
+}
+
+section h2,
+.articles article {
+   margin-bottom: 16px;
+}
+
+/* com id usa-se # e 
+   class use . "Ponto"
+   * propriedade global */
