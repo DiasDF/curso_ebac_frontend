@@ -22,11 +22,18 @@ header .container {
 header li a {
    color: darkgray;
    font-size: 20px;
+   text-decoration: none;
+}
+
+header li a:hover {
+   text-decoration: underline;
 }
 
 header li {
    display: inline;
    margin-left: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
 }
 .container {
    width: 1366px;
@@ -53,6 +60,8 @@ header li {
 
 .articles article h3 {
    margin: 8px auto;
+   font-size: 1.5em; /* Conversão: 24px / 16 = 1,5em // 24px / 0,16 = 150%
+*/
 }
 
 .articles article a {
@@ -62,8 +71,18 @@ header li {
    display: inline-block;
    border-radius: 7px;
    margin-top: 8px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   text-decoration: none;
 }
 
+.articles article a:hover {
+   text-decoration: underline;
+}
+
+.articles article p {
+   font-family: Arial, Helvetica, sans-serif;
+}
 section {
    padding: 16px 0;
 }
@@ -73,6 +92,12 @@ section h2,
    margin-bottom: 16px;
 }
 
-/* com id usa-se # e 
+#sports {
+   background-color: rgba(72, 72, 122, 0.1);
+}
+/*
+FONTES FICA BOM VARIAR DE 8 EM 8px H1 = 32px // H2 = 24px
+
+com id usa-se # e 
    class use . "Ponto"
    * propriedade global */
