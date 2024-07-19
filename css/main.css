@@ -9,14 +9,21 @@ body > header {
    background-color: #2f3640;
    padding: 16px 0;
    color: darkgray;
+   position: fixed;
+   left: 0;
+   right: 0;
 }
 /* O sinal > significa FILHO DIRETO, busca o header que é filho direto de body
- no index.html há headers também para os articles, assim o sinal > delimita para o header da página*/
+no index.html há headers também para os articles, assim o sinal > delimita para o header da página*/
 
 header .container {
    display: flex;
    align-items: center;
    justify-content: space-between;
+}
+
+header h1 {
+   font-size: 2em; /* 2em = 32px 200%*/
 }
 
 header li a {
@@ -35,6 +42,7 @@ header li {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
 }
+
 .container {
    width: 1366px;
    margin: 0 auto;
@@ -48,8 +56,10 @@ header li {
 }
 
 .articles article img {
-   /* height: 180px; */
-   width: 100%;
+   max-width: 100%;
+   height: auto;
+   object-fit: cover;
+   aspect-ratio: 16 / 11;
 }
 
 .articles article {
@@ -60,8 +70,7 @@ header li {
 
 .articles article h3 {
    margin: 8px auto;
-   font-size: 1.5em; /* Conversão: 24px / 16 = 1,5em // 24px / 0,16 = 150%
-*/
+   font-size: 1.25em; /* 20px / 16 = 1,25em ou 125% */
 }
 
 .articles article a {
@@ -82,9 +91,16 @@ header li {
 
 .articles article p {
    font-family: Arial, Helvetica, sans-serif;
+   /* font-size: 16px; 1em default*/
 }
+
 section {
    padding: 16px 0;
+}
+
+section h2 {
+   font-size: 1.75em; /* 28px / 16 = 1,75em ou 175% */
+   color: blue;
 }
 
 section h2,
@@ -95,6 +111,19 @@ section h2,
 #sports {
    background-color: rgba(72, 72, 122, 0.1);
 }
+
+#economy {
+   background-color: rgba(196, 197, 125, 0.1);
+}
+
+#entertainment {
+   background-color: rgba(122, 72, 72, 0.15);
+}
+
+#tecnology {
+   background-color: rgba(100, 170, 171, 0.15);
+}
+
 /*
 FONTES FICA BOM VARIAR DE 8 EM 8px H1 = 32px // H2 = 24px
 
