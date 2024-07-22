@@ -58,8 +58,9 @@ header li {
 .articles article img {
    max-width: 100%;
    height: auto;
-   object-fit: cover;
+   object-fit: cover; /* Define que a imagem deve preencher toda a área disponível */
    aspect-ratio: 16 / 11;
+   object-position: center;
 }
 
 .articles article {
@@ -99,6 +100,7 @@ section {
 }
 
 section h2 {
+   z-index: 5;
    font-size: 1.75em; /* 28px / 16 = 1,75em ou 175% */
    color: blue;
 }
