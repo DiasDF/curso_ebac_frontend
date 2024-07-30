@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0"
+      />
+      <title>Exemplo de grid-area</title>
+      <link
+         rel="preconnect"
+         href="https://fonts.googleapis.com"
+      />
+      <link
+         rel="preconnect"
+         href="https://fonts.gstatic.com"
+         crossorigin
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Bokor&family=DM+Serif+Display:ital@0;1&family=Foldit:wght@100..900&family=Grey+Qo&family=Kings&family=Love+Light&family=Orbitron:wght@400..900&display=swap"
+         rel="stylesheet"
+      />
+      <style>
+         .grid-container {
+            display: grid;
+            grid-template-areas:
+               'header header header'
+               'menu main main'
+               'footer footer footer';
+            grid-gap: 10px;
+         }
+         .header {
+            grid-area: header;
+            background-color: lightblue;
+            color: blue;
+         }
+         .menu {
+            grid-area: menu;
+            background-color: lightgreen;
+         }
+         .main {
+            grid-area: main;
+            background-color: lightcoral;
+         }
+         .footer {
+            grid-area: footer;
+            background-color: lightgoldenrodyellow;
+         }
+
+         h1,
+         h2,
+         h3 {
+            color: rgb(35, 193, 140);
+            font-family: 'Segoe UI', sans-serif;
+         }
+         p {
+            padding-left: 30px;
+            color: rgb(35, 124, 197);
+            font-size: 2rem;
+            font-family: 'Bokor', sans-serif;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="grid-container">
+         <div class="header">
+            <p>Header</p>
+            <h1>Reader</h1>
+         </div>
+         <div class="menu">
+            <p>Menu</p>
+            <h2>h2-Menu</h2>
+         </div>
+         <div class="main">
+            <p>Main Content</p>
+            <h2>h2-Main</h2>
+         </div>
+         <div class="footer">
+            <p>Footer</p>
+            <h3>h3-Footer</h3>
+         </div>
+      </div>
+   </body>
+</html>
