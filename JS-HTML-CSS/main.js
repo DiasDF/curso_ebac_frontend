@@ -1,6 +1,7 @@
 // Milton Dias Soares
 const form = document.getElementById('form-deposito');
 const nomeBeneficiario = document.getElementById('nome-beneficiario');
+let formEValido = false;
 
 function validaNome(nomeCompleto) {
    const arrayNome = nomeCompleto.split(' ');
@@ -9,7 +10,6 @@ function validaNome(nomeCompleto) {
 
 
 form.addEventListener('submit', function(e) {
-   let formEValido = false;
    e.preventDefault();
 
 
@@ -38,21 +38,24 @@ form.addEventListener('submit', function(e) {
    }
 }) // fim form 
 
-nomeBeneficiario.addEventListener('onKeyup', function(e) {
+nomeBeneficiario.addEventListener('keyup', function(e) {
    console.log(e.target.value);
-   // formEValido = validaNome(e.target.value);
-   // // Para ver o VALUE do campo toda vez que ele for alterado
+   formEValido = validaNome(e.target.value);
+   // Para ver o VALUE do campo toda vez que ele for alterado
 
-   // if (!formEValido) {
-   //    nomeBeneficiario.style.border = '1px solid red';
-   //    document.querySelector('.error-message').style.display = 'block';
+   if (!formEValido) {
+      nomeBeneficiario.classList.add('error');
+      // nomeBeneficiario.style.border = '1px solid red'; // FORMA ANTERIOR DE ERRO
+      document.querySelector('.error-message').style.display = 'block';
 
-   // } else {
-   //    nomeBeneficiario.style.border = '';
-   //    document.querySelector('.error-message').style.display = 'none';
+   } else {
+      nomeBeneficiario.classList.remove('error');
+      // nomeBeneficiario.style.border = '';
+      document.querySelector('.error-message').style.display = 'none';
 
-   // }
+   }
 })
+
 // keyup --> mostra em tempo real as alterações
 
 // console.log(form)
