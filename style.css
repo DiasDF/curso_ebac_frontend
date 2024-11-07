@@ -1,0 +1,162 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Roboto", sans-serif;
+}
+
+body {
+   background-color: #E7E7E7;
+   padding-top: 30px;
+}
+
+.container {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 800px;
+   border-radius: 10px;
+   padding: 25px;
+   box-shadow: 0px 17px 45px rgba(59, 74, 74, 0.15);
+}
+
+header img {
+   height: 36px;
+   margin-right: 16px;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   font-size: 17px;
+   font-weight: bold;
+   margin-left: 12px;
+}
+
+form {
+   margin: 25px 0;
+}
+
+form, input, button {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   font-size: 20px;
+   border-radius: 7px;
+   padding: 5px 12px;
+   border: none;
+   cursor: pointer;
+}
+
+form input {
+   background-color: #FFF;
+   border-bottom: 2px solid #000;
+}
+
+input:focus {
+   background-color: rgba(255, 255, 255, 0.5);
+   outline: none;
+}
+
+form button {
+   background-color: #009432;
+   border-bottom: 2px solid #000;
+   color: #FFF;
+   font-weight: bold;
+}
+
+button:focus {
+   background-color: #0cb043;
+   outline: none;
+}
+
+table, thead, tbody, tfoot {
+   text-align: center; /* O texto >> somente << foi alinhado com a propriedade >> text-align <<*/
+   width: 100%;
+   font-size: 20px;
+   padding: 5px 12px;
+   border-radius: 7px;
+}
+
+table thead {
+   background-color: rgba(0, 0, 0, 0.1);
+   font-weight: bold;
+}
+
+table th, td {
+   height: 50px;
+}
+
+table td {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.border-esquerda {
+   border-top-left-radius: 7px;
+   border-bottom-left-radius: 7px;
+}
+
+.border-direita {
+   border-top-right-radius: 7px;
+   border-bottom-right-radius: 7px;
+}
+
+table img {
+   height: 30px;
+}
+
+.resultado {
+   padding: 5px 12px;
+   font-weight: bold;
+   color: white;
+   border-radius: 7px;
+   border-bottom: 2px solid #000;
+   
+}
+
+.aprovado {
+   background-color: #009432;
+}
+
+.reprovado {
+   background-color: red;
+}
+
+/* 
+<body>
+<div class="container">
+   <header>
+      <img src="./images/logo.png" alt="Logo com Barrete de Formaturas">
+      <h1>Calculadora de Médias</h1>
+   </header>
+   <form action="">
+      <input type="text" required placeholder="Nome da Atividade" />
+      <input type="number" required placeholder="Nota de Atividade" min="0" max="10" />
+      <button type="submit">Adicionar</button>
+   </form>
+   <table>
+      <thead>
+         <tr>
+            <th>Nome da Atividade</th>
+            <th>Nota da Atividade</th>
+            <th>Aprovado?</th>
+         </tr>
+      </thead>
+      <hr class="">
+      <tbody>
+         <tr>
+            <td>Atividade 1</td>
+            <td>7</td>
+            <td><img src="./images/aprovado.png" alt="Emoji Festejando" /></td>
+         </tr>
+      </tbody>
+      <tfoot>
+         <tr>
+            <td>Média Final</td>
+            <td>7</td>
+            <td>Aprovado</td>
+         </tr>
+      </tfoot>
+   </table>
+</div>
+</body>
+*/
